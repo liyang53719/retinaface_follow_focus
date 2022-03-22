@@ -1,0 +1,177 @@
+model {
+  name : "retinaface"
+  kernel {
+     name: "retinaface"
+     mean: 0.0
+     mean: 0.0
+     mean: 0.0
+     scale: 1.0
+     scale: 1.0
+     scale: 1.0
+  }
+  model_type : RETINAFACE
+  retinaface_param : {
+    output_info : {
+      type : CONF
+      stride : 32
+      name : "cls_score_stride32_anchor0_bg"
+      output_anchor_info : {
+        type : BG
+        index : 0
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 32
+      name : "cls_score_stride32_anchor0_fg"
+      output_anchor_info : {
+        type : FG
+        index : 0
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 32
+      name : "cls_score_stride32_anchor1_bg"
+      output_anchor_info : {
+        type : BG
+        index : 1
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 32
+      name : "cls_score_stride32_anchor1_fg"
+      output_anchor_info : {
+        type : FG
+        index : 1
+      }
+    }
+    output_info : {
+      type : BBOX
+      stride : 32
+      name : "bbox_pred_stride32"
+    }
+    output_info : {
+      type : LANDMARK
+      stride : 32
+      name : "landmark_pred_stride32"
+    }
+    output_info : {
+      type : CONF
+      stride : 16
+      name : "cls_score_stride16_anchor0_bg"
+      output_anchor_info : {
+        type : BG
+        index : 0
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 16
+      name : "cls_score_stride16_anchor0_fg"
+      output_anchor_info : {
+        type : FG
+        index : 0
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 16
+      name : "cls_score_stride16_anchor1_bg"
+      output_anchor_info : {
+        type : BG
+        index : 1
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 16
+      name : "cls_score_stride16_anchor1_fg"
+      output_anchor_info : {
+        type : FG
+        index : 1
+      }
+    }
+    output_info : {
+      type : BBOX
+      stride : 16
+      name : "bbox_pred_stride16"
+    }
+    output_info : {
+      type : LANDMARK
+      stride : 16
+      name : "landmark_pred_stride16"
+    }
+    output_info : {
+      type : CONF
+      stride : 8
+      name : "cls_score_stride8_anchor0_bg"
+      output_anchor_info : {
+        type : BG
+        index : 0
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 8
+      name : "cls_score_stride8_anchor0_fg"
+      output_anchor_info : {
+        type : FG
+        index : 0
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 8
+      name : "cls_score_stride8_anchor1_bg"
+      output_anchor_info : {
+        type : BG
+        index : 1
+      }
+    }
+    output_info : {
+      type : CONF
+      stride : 8
+      name : "cls_score_stride8_anchor1_fg"
+      output_anchor_info : {
+        type : FG
+        index : 1
+      }
+    }
+    output_info : {
+      type : BBOX
+      stride : 8
+      name : "bbox_pred_stride8"
+    }
+    output_info : {
+      type : LANDMARK
+      stride : 8
+      name : "landmark_pred_stride8"
+    }
+    nms_threshold : 0.4
+    det_threshold : 0.5
+    anchor_param {
+      stride : 32
+      base_size : 16
+      ratios : 1.0
+      scales : 32
+      scales : 16
+    }
+    anchor_param {
+      stride : 16
+      base_size : 16
+      ratios : 1.0
+      scales : 8
+      scales : 4
+    }
+    anchor_param {
+      stride : 8
+      base_size : 16
+      ratios : 1.0
+      scales : 2
+      scales : 1
+    }
+  }
+}
+
